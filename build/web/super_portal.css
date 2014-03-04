@@ -1,0 +1,96 @@
+@font-face
+{
+font-family: Portal;
+src: url('../resources/portal.ttf');
+}
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  margin: 0;
+  padding:0;
+  text-align:center;
+  background-image: url("../images/regular-block.png");
+  background-position:center top;
+}
+canvas{
+  opacity:0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#text-line{
+  font-family: "Lucida Console", Monaco, monospace;
+  position:absolute;
+  top:0;
+  display:block;
+  background-color:rgba(145, 101, 0, 0.5);
+  color: rgb(230, 210, 67);
+  width:100%;
+  font-size:32px;
+  line-height:64px;
+  height:0;
+  overflow:hidden;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#card{
+  background-color:#fff;
+  border:1px solid #ccc;
+  -moz-box-shadow:    inset 0 0 20px #ddd;
+   -webkit-box-shadow: inset 0 0 20px #ddd;
+   box-shadow:         inset 0 0 20px #ddd;
+   width:300px;
+   font-family:Portal;
+   text-align:center;
+   display:none;
+   opacity:0;
+   position:absolute;
+   left:0;
+   right:0;
+   margin-left:auto;
+   margin-right:auto;
+   top: 50%;
+    height: 300px;
+    margin-top: -150px;
+    -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#card h1{
+    font-weight:100;
+    font-size:100px;
+    line-height:100px;
+    margin:0;
+    padding:0;
+    padding:25px 0;
+    border:0 solid #ccc;
+    border-bottom-width: 1px;
+  }
+#card a{
+    font-size: 25px;
+    display:block;
+    padding:9px;
+    color:#333;
+    text-decoration:none;
+     -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  }
+  #card a:hover{
+    color:orange;
+  }
+  em{
+  font-style:normal;
+  color:#A1DBFF;
+}

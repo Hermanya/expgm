@@ -1,13 +1,15 @@
 <!doctype html>
-<html>
+<html ng-app="app">
   <head>
     <title>Portal-like game online</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="build/style/style.css">
-    <script src="build/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src="services/metaService.js"></script>
   
   </head>
-  <body>
+  <body ng-controller="mainController">
     
     <header>
       <section>
@@ -18,19 +20,22 @@
         <div class="card">
           <h1>01</h1>
           <span>experiment</span>
-          <a href="build/web/game.html?chamber=1"><em>[</em>start<em>]</em></a>
+          <a href="web/game.html?chamber=1"><em>[</em>start<em>]</em></a>
         </div>
       </section>
     </header>
   	<main>
+  		<!--div ng-repeat="level in levels" >
+        {{level.number}}
+      </div-->
       <aside>
         
         <h2>All:</h2>
         <ol>
-          <li><a href="build/web/game.html?chamber=1">01</a></li>
-          <li><a href="build/web/game.html?chamber=2">02</a></li>
-          <li><a href="build/web/game.html?chamber=3">03</a></li>
-          <li><a href="build/web/game.html?chamber=4">04</a></li>
+          <li><a href="web/game.html?chamber=1">01</a></li>
+          <li><a href="web/game.html?chamber=2">02</a></li>
+          <li><a href="web/game.html?chamber=3">03</a></li>
+          <li><a href="web/game.html?chamber=4">04</a></li>
         </ol>
         <h2>Features:</h2>
          <ul>
