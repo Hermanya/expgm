@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editor</title>
+  </head>
+ 
+  <body>   
+  
+    <canvas id="canvas">Your browser doesn't support canvas.</canvas>
+    <span id="text-line"  ></span>
+    <select id="current-item">
+      <option value="regular-block">regular-block</option>
+      <option value="non-portable-block">non-portable-block</option>
+    </select>
+    <script type="application/dart" src="editor.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

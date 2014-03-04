@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <title>Portal-like game online</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src="services/metaService.js"></script>
+  
+  </head>
+  <body ng-controller="mainController">
+    
+    <header>
+      <section>
+        <h2 id="portal"><em>Experiment</em>al game</h2>
+        <h6>inspired by the Valve's P<span class="orange">O</span>RTAL</h6>
+      </section>
+      <section>
+        <div class="card">
+          <h1>01</h1>
+          <span>experiment</span>
+          <a href="web/game.html?chamber=1"><em>[</em>start<em>]</em></a>
+        </div>
+      </section>
+    </header>
+  	<main>
+  		<!--div ng-repeat="level in levels" >
+        {{level.number}}
+      </div-->
+      <aside>
+        
+        <h2>All:</h2>
+        <ol>
+          <li><a href="web/game.html?chamber=1">01</a></li>
+          <li><a href="web/game.html?chamber=2">02</a></li>
+          <li><a href="web/game.html?chamber=3">03</a></li>
+          <li><a href="web/game.html?chamber=4">04</a></li>
+        </ol>
+        <h2>Features:</h2>
+         <ul>
+          <li>Instant</li>
+          <li>0pen-source</li>
+          <!--li>Responsive</li-->
+          <li>Sort of fun</li>
+        </ul>
+      </aside>
+     <a class="twitter-timeline" href="https://twitter.com/expgm" data-widget-id="439840606932566016">Tweets by @expgm</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+  	</main>
+    <footer>
+      <pre>45 78 70 65 72 69 6d 65 6e 74 2c 20 62 65 63 61 75 73 65 20 49 20 63 61 6e 2e
+All rights reserved for Valve Corporation.</pre>
+      <!--Applied Abilities Game Studio.-->
+      
+    </footer>
+  </body>
+</html>

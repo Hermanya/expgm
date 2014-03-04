@@ -1,0 +1,15 @@
+{
+  "name": "readonly",
+  "version": "0.0.0",
+  "authors": [
+    "Herman Starikov <hermanya@me.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
