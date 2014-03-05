@@ -16,8 +16,8 @@ class Portal{
           return null;
       }
     }
-    num offsetY = canvas.height - event.offsetY;
-    num offsetX = event.offsetX;
+    num offsetY = canvas.height - event.offset.y;
+    num offsetX = event.offset.x;
     num slope = (offsetY-actor.y-actor.height*0.75)/(offsetX-actor.x);
     if (slope == double.INFINITY)
       slope = 1000;

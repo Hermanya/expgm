@@ -323,8 +323,8 @@ class Actor{
     return;
   }
   void moveAim(event,canvas,clone){
-    num offsetY = canvas.height-event.offsetY;
-    num offsetX = event.offsetX;
+    num offsetY = canvas.height-event.offset.y;
+    num offsetX = event.offset.x;
     num slope = (offsetY-y-32)/(x-offsetX);
     if (slope > 64)
       slope = 64;
