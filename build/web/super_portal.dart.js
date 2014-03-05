@@ -4764,7 +4764,11 @@ if(1>=z)return H.e(y,1)
 this.a.u(0,x,y[1])}}},
 QA:{
 "^":"Tp:25;b",
-call$1:function(a){this.b.play()}}},1],])
+call$1:function(a){var z
+P.JS("ended")
+z=this.b
+z.currentTime=0
+z.play()}}},1],])
 I.$finishClasses($$,$,null)
 $$=null
 J.im.$isint=true
