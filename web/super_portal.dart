@@ -82,6 +82,7 @@ void main() {
   var audio = new AudioElement("../resources/Portal2-02-Halls_of_Science_4_ringtone.mp3");
   //http://media.steampowered.com/apps/portal2/soundtrack/02/ringtones/mp3/Portal2-02-Halls_of_Science_4_ringtone.mp3
   audio.play();
+  audio.onEnded.listen((Event e){audio.play();});
 }
 onDataLoaded(string){
  sideLength = canvas.width/18;
