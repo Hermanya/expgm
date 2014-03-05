@@ -30,7 +30,7 @@ class Render{
     //stage
     int i,j;
     num l = Block.sideLength;
-    ctx.lineWidth=0.01;
+    ctx.lineWidth=2;
     ctx.strokeStyle="#000";
     for (i = stage.blocks.length - 1; i >= 0; i--){
       for (j = 0; j < stage.blocks[i].length; j++){
@@ -82,9 +82,6 @@ class Render{
          
           ctx..fill()
              ..stroke()
-   /*         ..lineWidth=1
-           ..stroke()
-             ..lineWidth=2*/
              ..closePath();
       }
     }

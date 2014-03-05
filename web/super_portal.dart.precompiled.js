@@ -4230,7 +4230,7 @@ z.moveTo(0,w)
 z.lineTo(x.gR(y),w)
 w+=32}z.stroke()
 u=$.ye
-z.lineWidth=0.01
+z.lineWidth=2
 z.strokeStyle="#000"
 for(w=b.Ol.length-1;w>=0;--w){v=w*w
 t=0
