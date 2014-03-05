@@ -16,19 +16,16 @@ class Render{
     ctx.lineWidth=0.3;
     ctx.fillRect(0,0,canvas.width,canvas.height);
     //background grid
+    ctx..beginPath();
     for(int i = 0; i<canvas.width; i+=32){
-      ctx..beginPath()
-         ..moveTo(i,0)
-         ..lineTo(i,canvas.height)
-         ..stroke();
+      ctx..moveTo(i,0)
+         ..lineTo(i,canvas.height);
     }
     for(int i = 0; i<canvas.height; i+=32){
-      ctx..beginPath()
-         ..moveTo(0,i)
-         ..lineTo(canvas.width,i)
-         ..stroke();
+      ctx..moveTo(0,i)
+         ..lineTo(canvas.width,i);
     }
-    
+    ctx..stroke();
     
     //stage
     int i,j;
@@ -63,7 +60,7 @@ class Render{
                 canvas.height-stage.blocks[i][j].y+l/2)
              ..lineTo(stage.blocks[i][j].x-l/2,
                 canvas.height-stage.blocks[i][j].y+l/2);
-          ctx..closePath();
+         
           
           if ((j*j+i) % 4 == 0){
           ctx..moveTo(stage.blocks[i][j].x,
@@ -85,9 +82,9 @@ class Render{
          
           ctx..fill()
              ..stroke()
-            ..lineWidth=1
+   /*         ..lineWidth=1
            ..stroke()
-             ..lineWidth=2
+             ..lineWidth=2*/
              ..closePath();
       }
     }

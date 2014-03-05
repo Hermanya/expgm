@@ -4215,23 +4215,21 @@ z.lineWidth=0.3
 y=this.qN
 x=J.RE(y)
 z.fillRect(0,0,x.gR(y),x.gfg(y))
+z.beginPath()
 w=0
 while(!0){v=x.gR(y)
 if(typeof v!=="number")return H.s(v)
 if(!(w<v))break
-z.beginPath()
 z.moveTo(w,0)
 z.lineTo(w,x.gfg(y))
-z.stroke()
 w+=32}w=0
 while(!0){v=x.gfg(y)
 if(typeof v!=="number")return H.s(v)
 if(!(w<v))break
-z.beginPath()
 z.moveTo(0,w)
 z.lineTo(x.gR(y),w)
-z.stroke()
-w+=32}u=$.ye
+w+=32}z.stroke()
+u=$.ye
 z.lineWidth=0.01
 z.strokeStyle="#000"
 for(w=b.Ol.length-1;w>=0;--w){v=w*w
@@ -4297,7 +4295,6 @@ s=J.U5(J.UQ(s[w],t))
 if(typeof q!=="number")return q.W()
 if(typeof s!=="number")return H.s(s)
 z.lineTo(p,q-s+r)
-z.closePath()
 if(C.jn.Y(t*t+w,4)===0){s=b.Ol
 if(w>=s.length)return H.e(s,w)
 s=J.Rd(J.UQ(s[w],t))
@@ -4358,9 +4355,6 @@ if(typeof p!=="number")return p.W()
 if(typeof q!=="number")return H.s(q)
 z.lineTo(r,p-q)}z.fill()
 z.stroke()
-z.lineWidth=1
-z.stroke()
-z.lineWidth=2
 z.closePath();++t}}v=b.CF
 this.bB(v.lu,v)
 s=J.xH(v.x,v.R/2)
