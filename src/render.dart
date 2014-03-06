@@ -17,6 +17,8 @@ class Render{
     ctx.fillRect(0,0,canvas.width,canvas.height);
     //background grid
     ctx..beginPath();
+    ctx..closePath()
+      ..beginPath();
     for(int i = 0; i<canvas.width; i+=32){
       ctx..moveTo(i,0)
          ..lineTo(i,canvas.height);
@@ -26,7 +28,29 @@ class Render{
          ..lineTo(canvas.width,i);
     }
     ctx..stroke();
-    
+    ctx..closePath()
+          ..beginPath();
+//verticalButton
+if (stage.verticalButton!=null){
+  drawVerticalButton(stage.verticalButton);
+}
+//door 
+drawDoor(stage.entryDoor,512);
+drawDoor(stage.exitDoor,(stage.exitDoor.isOpen?384:
+                                  stage.exitDoor.progress==0?0:
+                                    stage.exitDoor.progress<5?128:256));
+    if (actor!=null){ 
+        //portals
+          for (Portal portal in actor.portals){
+            if (portal!=null){
+              drawPortal(portal);
+            }
+          }
+          
+      
+      //player
+          drawActors(actor, clone, previousActor);
+        }
     //stage
     int i,j;
     num l = Block.sideLength;
@@ -85,27 +109,8 @@ class Render{
              ..closePath();
       }
     }
-//verticalButton
-  if (stage.verticalButton!=null){
-    drawVerticalButton(stage.verticalButton);
-  }
-  //door 
-  drawDoor(stage.entryDoor,512);
-  drawDoor(stage.exitDoor,(stage.exitDoor.isOpen?384:
-                                    stage.exitDoor.progress==0?0:
-                                      stage.exitDoor.progress<5?128:256));
-    if (actor!=null){ 
-    //portals
-      for (Portal portal in actor.portals){
-        if (portal!=null){
-          drawPortal(portal);
-        }
-      }
-      
-  
-  //player
-      drawActors(actor, clone, previousActor);
-    }
+
+    
   }
   drawActors(Actor actor,Actor clone, Actor previousActor){
     num animationOffset;
